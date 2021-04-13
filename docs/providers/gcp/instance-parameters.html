@@ -1,0 +1,320 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Instance Parameters &mdash; spotty 1.3.2 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/styles.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+        <script src="../../../_static/scripts.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Disks and Deletion Policies" href="disks-and-deletion-policies.html" />
+    <link rel="prev" title="GCP Account Preparation" href="account-preparation.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html">
+          
+
+          
+            
+            <img src="../../../_static/logo_400x130_grey.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.3.2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p><span class="caption-text">User Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../user-guide/getting-started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user-guide/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user-guide/configuration-file.html">Spotty Configuration File</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cli/spotty.html">Spotty Command-line Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../cli/spotty-start.html">spotty start</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cli/spotty-stop.html">spotty stop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cli/spotty-sh.html">spotty sh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cli/spotty-sync.html">spotty sync</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cli/spotty-download.html">spotty download</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cli/spotty-run.html">spotty run</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cli/spotty-exec.html">spotty exec</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cli/spotty-aws.html">spotty aws</a></li>
+</ul>
+</li>
+</ul>
+<p><span class="caption-text">Providers</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../local/overview.html">Local Provider</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../local/instance-parameters.html">Instance Parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../remote/overview.html">Remote Provider</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../remote/instance-parameters.html">Instance Parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../aws/overview.html">AWS Provider</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../aws/instance-parameters.html">Instance Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aws/ebs-volumes-and-deletion-policies.html">EBS Volumes and Deletion Policies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aws/caching-docker-image-on-an-ebs-volume.html">Caching Docker Image on an EBS Volume</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../aws/faq.html">FAQ</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="overview.html">GCP Provider</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="account-preparation.html">GCP Account Preparation</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Instance Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="disks-and-deletion-policies.html">Disks and Deletion Policies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="caching-docker-image-on-a-disk.html">Caching Docker Image on a Disk</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">spotty</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="overview.html">GCP Provider Overview</a> &raquo;</li>
+        
+      <li>Instance Parameters</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="instance-parameters">
+<h1>Instance Parameters<a class="headerlink" href="#instance-parameters" title="Permalink to this headline">¶</a></h1>
+<p>Instance parameters are part of the <a class="reference internal" href="../../user-guide/configuration-file.html"><span class="doc">configuration file</span></a>, but for each provider they are different.
+Here you can find parameters for a GCP instance:</p>
+<ul>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">containerName</span></code></strong> <em>(optional)</em> - a name of the container from the <code class="docutils literal notranslate"><span class="pre">containers</span></code> section.
+Default value: <code class="docutils literal notranslate"><span class="pre">default</span></code>.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">zone</span></code></strong> - GCP zone where to run an instance.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">machineType</span></code></strong> - a type of the instance to run. You can find a list of predefined machine types
+here: <a class="reference external" href="https://cloud.google.com/compute/docs/machine-types">Machine Types</a>. If you in doubt what to use,
+just go for <code class="docutils literal notranslate"><span class="pre">n1-standard-1</span></code>. To attach GPUs to the selected machine type, use the <code class="docutils literal notranslate"><span class="pre">gpu</span></code> parameter (see
+the details below).</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">gpu</span></code></strong> <em>(optional)</em> - <em>a dictionary with keys <code class="docutils literal notranslate"><span class="pre">type</span></code> and <code class="docutils literal notranslate"><span class="pre">count</span></code></em>:</p>
+<ul class="simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">type</span></code></strong> - a type of GPU to attach to the instance. Read more about GPUs and their availabily
+in different zones here: <a class="reference external" href="https://cloud.google.com/compute/docs/gpus/">GPUs on Compute Engine</a>.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">count</span></code></strong> <em>(optional)</em> - a number of GPUs that should be attached to the instance. The default
+value is 1. See here a number of GPUs that you can attach to different machine types:
+<a class="reference external" href="https://cloud.google.com/ml-engine/docs/tensorflow/using-gpus#gpu-compatibility-table">Valid numbers of GPUs for each machine type</a>.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">preemptibleInstance</span></code></strong> <em>(optional)</em> - if set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, runs a preemptible instance instead of an on-demand
+instance. <strong>Note:</strong> be aware that GCP terminates preemptible instances in 24 hours. Read more about Preemptible VMs
+<a class="reference external" href="https://cloud.google.com/compute/docs/instances/preemptible">here</a>.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">imageName</span></code></strong> <em>(optional)</em> - a name of the image with NVIDIA Docker in the current GCP project. You can use
+the <code class="docutils literal notranslate"><span class="pre">spotty</span> <span class="pre">gcp</span> <span class="pre">create-image</span></code> command to create it. By default, the command will create an image with the name
+&quot;spotty&quot;. This image will be used to run your application inside the Docker container. If you didn't create your own
+image, see the behaviour of the <code class="docutils literal notranslate"><span class="pre">imageUrl</span></code> parameter.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">imageUrl</span></code></strong> <em>(optional)</em> - a URL of the image with NVIDIA Docker. You can use this parameter to work with an image
+from another GCP project. If this parameter is not specified and you didn't create your own image (see the <code class="docutils literal notranslate"><span class="pre">imageName</span></code>
+parameter), Spotty will be using the <code class="docutils literal notranslate"><span class="pre">projects/spotty-cloud/global/images/family/spotty</span></code> image provided by the Spotty
+project.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">bootDiskSize</span></code></strong> <em>(optional)</em> - size of the root volume in GB. The root volume will be destroyed once
+the instance is terminated. Use attached volumes to store the data that you need to keep (see the <code class="docutils literal notranslate"><span class="pre">volumes</span></code>
+parameter below).</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">dockerDataRoot</span></code></strong> <em>(optional)</em> - directory where Docker will store all downloaded and built images.
+Read more: <a class="reference internal" href="caching-docker-image-on-a-disk.html"><span class="doc">Caching Docker Image on a Disk</span></a>.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">volumes</span></code></strong> <em>(optional)</em> - the list of volumes to attach to the instance:</p>
+<ul>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">name</span></code></strong> - a name of the volume. This name should match one of the container's <code class="docutils literal notranslate"><span class="pre">volumeMounts</span></code> to have this
+volume attached to the container's filesystem.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">parameters</span></code></strong> <em>(optional)</em> - parameters of the volume:</p>
+<ul>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">size</span></code></strong> <em>(optional)</em> - size of the disk in GB. Size of the disk cannot be less than the size of
+the existing snapshot but can be increased.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">deletionPolicy</span></code></strong> <em>(optional)</em> - what to do with the disk once the instance is terminated using the
+<code class="docutils literal notranslate"><span class="pre">spotty</span> <span class="pre">stop</span></code> command. Possible values include: &quot;<strong>Retain</strong>&quot; <em>(value by default)</em>, &quot;<strong>CreateSnapshot</strong>&quot;,
+&quot;<strong>UpdateSnapshot</strong>&quot; and  &quot;<strong>Delete</strong>&quot;. Read more: <a class="reference internal" href="disks-and-deletion-policies.html"><span class="doc">Disks and Deletion Policies</span></a>.</p>
+<p><strong>(!) Note:</strong> Deletion Policies are not implemented yet, so created disks will always retain.</p>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">diskName</span></code></strong> <em>(optional)</em> - name of the disk. The default name is
+&quot;{project_name}-{instance_name}-{volume_name}&quot;.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">mountDir</span></code></strong> <em>(optional)</em> - directory where the disk will be mounted on the instance. The default
+directory is &quot;/mnt/{disk_name}&quot;.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">ports</span></code></strong> <em>(optional)</em> - list of ports to open on the instance. For example:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">ports</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">6006</span><span class="p p-Indicator">,</span> <span class="nv">8888</span><span class="p p-Indicator">]</span>
+</pre></div>
+</div>
+<p>It will open ports 6006 for TensorBoard and 8888 for Jupyter Notebook.</p>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">localSshPort</span></code></strong> <em>(optional)</em> - if this parameter is set, all the Spotty commands will create SSH connections
+with the instance using the IP address <strong>127.0.0.1</strong> and the specified port. This can be useful in case when an
+instance doesn't have a public IP address and a jump-server is used for tunneling.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">commands</span></code></strong> <em>(optional)</em> - commands that should be run on the host OS before the container is started.</p></li>
+</ul>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="disks-and-deletion-policies.html" class="btn btn-neutral float-right" title="Disks and Deletion Policies" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="account-preparation.html" class="btn btn-neutral float-left" title="GCP Account Preparation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

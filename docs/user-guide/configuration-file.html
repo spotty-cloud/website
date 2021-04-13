@@ -1,0 +1,461 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Spotty Configuration File &mdash; spotty 1.3.2 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/styles.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/scripts.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Spotty Command-line Interface" href="../cli/spotty.html" />
+    <link rel="prev" title="Installation" href="installation.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html">
+          
+
+          
+            
+            <img src="../../_static/logo_400x130_grey.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.3.2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p><span class="caption-text">User Guide</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting-started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Spotty Configuration File</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cli/spotty.html">Spotty Command-line Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cli/spotty-start.html">spotty start</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cli/spotty-stop.html">spotty stop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cli/spotty-sh.html">spotty sh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cli/spotty-sync.html">spotty sync</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cli/spotty-download.html">spotty download</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cli/spotty-run.html">spotty run</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cli/spotty-exec.html">spotty exec</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cli/spotty-aws.html">spotty aws</a></li>
+</ul>
+</li>
+</ul>
+<p><span class="caption-text">Providers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../providers/local/overview.html">Local Provider</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../providers/local/instance-parameters.html">Instance Parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../providers/remote/overview.html">Remote Provider</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../providers/remote/instance-parameters.html">Instance Parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../providers/aws/overview.html">AWS Provider</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../providers/aws/instance-parameters.html">Instance Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../providers/aws/ebs-volumes-and-deletion-policies.html">EBS Volumes and Deletion Policies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../providers/aws/caching-docker-image-on-an-ebs-volume.html">Caching Docker Image on an EBS Volume</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../providers/aws/faq.html">FAQ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../providers/gcp/overview.html">GCP Provider</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../providers/gcp/account-preparation.html">GCP Account Preparation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../providers/gcp/instance-parameters.html">Instance Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../providers/gcp/disks-and-deletion-policies.html">Disks and Deletion Policies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../providers/gcp/caching-docker-image-on-a-disk.html">Caching Docker Image on a Disk</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">spotty</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Spotty Configuration File</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="spotty-configuration-file">
+<h1>Spotty Configuration File<a class="headerlink" href="#spotty-configuration-file" title="Permalink to this headline">¶</a></h1>
+<p>By default, Spotty is looking for a <code class="docutils literal notranslate"><span class="pre">spotty.yaml</span></code> file in the root directory of the project. This file describes
+parameters of a remote instance and an environment for the project. Here is a basic example of such file for AWS:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">project</span><span class="p">:</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">my-project-name</span>
+  <span class="nt">syncFilters</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">exclude</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">.git/*</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">.idea/*</span>
+      <span class="p p-Indicator">-</span> <span class="s">&#39;*/__pycache__/*&#39;</span>
+
+<span class="nt">containers</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">projectDir</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/workspace/project</span>
+    <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">tensorflow/tensorflow:latest-gpu-py3-jupyter</span>
+    <span class="nt">env</span><span class="p">:</span>
+      <span class="nt">PYTHONPATH</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/workspace/project</span>
+    <span class="nt">ports</span><span class="p">:</span>
+      <span class="c1"># TensorBoard</span>
+      <span class="p p-Indicator">-</span> <span class="nt">containerPort</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">6006</span>
+        <span class="nt">hostPort</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">6006</span>
+      <span class="c1"># Jupyter</span>
+      <span class="p p-Indicator">-</span> <span class="nt">containerPort</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">8888</span>
+        <span class="nt">hostPort</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">8888</span>
+    <span class="nt">volumeMounts</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">workspace</span>
+        <span class="nt">mountPath</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/workspace</span>
+
+<span class="nt">instances</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">aws-1</span>
+    <span class="nt">provider</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">aws</span>
+    <span class="nt">parameters</span><span class="p">:</span>
+      <span class="nt">region</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">eu-west-1</span>
+      <span class="nt">instanceType</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">p2.xlarge</span>
+      <span class="nt">ports</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">6006</span><span class="p p-Indicator">,</span> <span class="nv">8888</span><span class="p p-Indicator">]</span>
+      <span class="nt">volumes</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">workspace</span>
+          <span class="nt">parameters</span><span class="p">:</span>
+            <span class="nt">size</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">50</span>
+
+<span class="nt">scripts</span><span class="p">:</span>
+  <span class="nt">tensorboard</span><span class="p">:</span> <span class="p p-Indicator">|</span>
+    <span class="no">tensorboard --bind_all --port 6006 --logdir /workspace/project/training</span>
+  <span class="nt">jupyter</span><span class="p">:</span> <span class="p p-Indicator">|</span>
+    <span class="no">jupyter notebook --allow-root --ip 0.0.0.0 --notebook-dir=/workspace/project</span>
+</pre></div>
+</div>
+<p>Instance parameters are different for each provider:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../providers/local/instance-parameters.html"><span class="doc">Local Provider Instance Parameters</span></a></p></li>
+<li><p><a class="reference internal" href="../providers/remote/instance-parameters.html"><span class="doc">Remote Provider Instance Parameters</span></a></p></li>
+<li><p><a class="reference internal" href="../providers/aws/instance-parameters.html"><span class="doc">AWS Provider Instance Parameters</span></a></p></li>
+<li><p><a class="reference internal" href="../providers/gcp/instance-parameters.html"><span class="doc">GCP Provider Instance Parameters</span></a></p></li>
+</ul>
+<section id="available-parameters">
+<h2>Available Parameters<a class="headerlink" href="#available-parameters" title="Permalink to this headline">¶</a></h2>
+<p>Configuration file consists of 4 sections: <code class="docutils literal notranslate"><span class="pre">project</span></code>, <code class="docutils literal notranslate"><span class="pre">containers</span></code>, <code class="docutils literal notranslate"><span class="pre">instances</span></code> and <code class="docutils literal notranslate"><span class="pre">scripts</span></code>.</p>
+<section id="project-section">
+<h3><strong><code class="docutils literal notranslate"><span class="pre">project</span></code></strong> section<a class="headerlink" href="#project-section" title="Permalink to this headline">¶</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">project</span></code> section contains the following parameters:</p>
+<ul>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">name</span></code></strong> - the name of your project. It will be used to create an S3 bucket and a CloudFormation stack to run
+an instance.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">syncFilters</span></code></strong> <em>(optional)</em> - filters to skip some directories or files during synchronization. By default, all
+project files will be synced with the instance. Example:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">syncFilters</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">exclude</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">.idea/*</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">.git/*</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">data/*</span>
+  <span class="p p-Indicator">-</span> <span class="nt">include</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">data/test/*</span>
+  <span class="p p-Indicator">-</span> <span class="nt">exclude</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">data/test/dump.json</span>
+</pre></div>
+</div>
+<p>It will skip &quot;.idea/&quot;, &quot;.git/&quot; and &quot;data/&quot; directories except the &quot;data/test/&quot; directory. All files from
+the &quot;data/test/&quot; directory will be synced with the instance except the &quot;data/test/dump.json&quot; file.</p>
+<p>You can read more about filters
+here: <a class="reference external" href="https://docs.aws.amazon.com/cli/latest/reference/s3/index.html#use-of-exclude-and-include-filters">Use of Exclude and Include Filter</a>.</p>
+</li>
+</ul>
+</section>
+<section id="containers-section">
+<h3><strong><code class="docutils literal notranslate"><span class="pre">containers</span></code></strong> section<a class="headerlink" href="#containers-section" title="Permalink to this headline">¶</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">containers</span></code> section contains a list of containers where each container is described
+with the following parameters:</p>
+<ul>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">name</span></code></strong> - a name of the container. You can associate containers with the instances using the <code class="docutils literal notranslate"><span class="pre">containerName</span></code>
+parameter in the instance configuration. Default value: <code class="docutils literal notranslate"><span class="pre">default</span></code>.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">projectDir</span></code></strong> - a directory inside the container where the local project will be copied. If
+it's a subdirectory of a container volume, the project will be located on that volume,
+otherwise, the data will be lost once the instance is terminated.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">image</span></code></strong> <em>(optional)</em> - the name of the Docker image that contains the environment for your project. For example,
+you could use <a class="reference external" href="https://hub.docker.com/r/tensorflow/tensorflow/">TensorFlow image for GPU</a>
+(<code class="docutils literal notranslate"><span class="pre">tensorflow/tensorflow:latest-gpu-py3-jupyter</span></code>). It already contains NumPy, SciPy, scikit-learn, pandas, Jupyter Notebook and
+TensorFlow itself. If you need to use your own image, you can specify the path to your Dockerfile in the
+<strong><code class="docutils literal notranslate"><span class="pre">file</span></code></strong> parameter (see below), or push your image to the <a class="reference external" href="https://hub.docker.com/">Docker Hub</a>.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">file</span></code></strong> <em>(optional)</em> - relative path to your custom Dockerfile.</p>
+<p><strong>Note:</strong> Spotty uses the directory with the Dockerfile as its build context, so make sure it doesn't contain
+gigabytes of irrelevant data (keep the Dockerfile in a separate directory or use the <code class="docutils literal notranslate"><span class="pre">.dockerignore</span></code> file).
+Otherwise, you may get an out-of-space error because Docker copies the entire build context to the Docker daemon
+during the build. Read more here: <a class="reference external" href="https://docs.docker.com/engine/reference/commandline/build/">&quot;docker build&quot; command</a>.</p>
+<p><strong>Example:</strong> if you use TensorFlow and need to download your dataset from S3, you could install
+<a class="reference external" href="https://github.com/aws/aws-cli">AWS CLI</a> on top of the original TensorFlow image. Just create a
+<code class="docutils literal notranslate"><span class="pre">Dockerfile</span></code> in the <code class="docutils literal notranslate"><span class="pre">docker/</span></code> directory of your project:</p>
+<div class="highlight-dockerfile notranslate"><div class="highlight"><pre><span></span><span class="k">FROM</span> <span class="s">tensorflow/tensorflow:latest-gpu-py3-jupyter</span>
+
+<span class="k">RUN</span> pip install awscli
+</pre></div>
+</div>
+<p>Then set the <code class="docutils literal notranslate"><span class="pre">file</span></code> parameter to <code class="docutils literal notranslate"><span class="pre">docker/Dockerfile</span></code>.</p>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">runAsHostUser</span></code></strong> <em>(optional)</em> - if set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the container will be run with the host user ID and group ID,</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">volumeMounts</span></code></strong> <em>(optional)</em> - where to mount instance volumes into the container's filesystem. Each element
+of a list has the following parameters:</p>
+<ul class="simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">name</span></code></strong> - this must match the name of an instance volume.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">mountPath</span></code></strong> - a path within the container at which the volume should be mounted.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">workingDir</span></code></strong> <em>(optional)</em> - working directory for your custom scripts (see &quot;scripts&quot; section below),</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">env</span></code></strong> <em>(optional)</em> - a dictionary with environmental variables that will be available in the container,</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">hostNetwork</span></code></strong> <em>(optional)</em> - if set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the Docker container will be run with the host network,</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">ports</span></code></strong> <em>(optional)</em> - container ports that should be published to the host. Each element of a list
+contains the following parameters:</p>
+<ul class="simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">containerPort</span></code></strong> - a container port,</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">hostPort</span></code></strong> <em>(optional)</em> - a host port. By default, the container port will be published on a random
+host port.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">commands</span></code></strong> <em>(optional)</em> - commands which should be performed once your container is started. For example, you
+could download your datasets from an S3 bucket to the project directory (see &quot;project&quot; section):</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">commands</span><span class="p">:</span> <span class="p p-Indicator">|</span>
+  <span class="no">aws s3 sync s3://my-bucket/datasets/my-dataset /workspace/project/data</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">runtimeParameters</span></code></strong> <em>(optional)</em> - a list of additional parameters for the container runtime. For example:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">runtimeParameters</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">&#39;--privileged&#39;</span><span class="p p-Indicator">,</span> <span class="s">&#39;--shm-size&#39;</span><span class="p p-Indicator">,</span> <span class="s">&#39;2G&#39;</span><span class="p p-Indicator">]</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+<section id="instances-section">
+<h3><strong><code class="docutils literal notranslate"><span class="pre">instances</span></code></strong> section<a class="headerlink" href="#instances-section" title="Permalink to this headline">¶</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">instances</span></code> section contains a list of instances where each instance is described
+with the following parameters:</p>
+<ul class="simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">name</span></code></strong> - a name of the instance. Use this name to manage the instance with the commands like
+&quot;spotty start&quot; or &quot;spotty stop&quot;. Also Spotty uses this name in the names of AWS and GCP resources.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">provider</span></code></strong> - a provider for the instance. At the moment Spotty supports 4 providers:</p>
+<ul>
+<li><p>&quot;<strong>local</strong>&quot; - runs containers using the Docker installed on the local machine,</p></li>
+<li><p>&quot;<strong>remote</strong>&quot; - runs containers on a remote machine through SSH,</p></li>
+<li><p>&quot;<strong>aws</strong>&quot; - Amazon Web Services EC2 instances,</p></li>
+<li><p>&quot;<strong>gcp</strong>&quot; - Google Cloud Platform VMs.</p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">parameters</span></code></strong> - parameters of the instance. These parameters are different for each provider:</p>
+<ul>
+<li><p><a class="reference internal" href="../providers/local/instance-parameters.html"><span class="doc">Local Provider Instance Parameters</span></a></p></li>
+<li><p><a class="reference internal" href="../providers/remote/instance-parameters.html"><span class="doc">Remote Provider Instance Parameters</span></a></p></li>
+<li><p><a class="reference internal" href="../providers/aws/instance-parameters.html"><span class="doc">AWS Provider Instance Parameters</span></a></p></li>
+<li><p><a class="reference internal" href="../providers/gcp/instance-parameters.html"><span class="doc">GCP Provider Instance Parameters</span></a></p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="scripts-section">
+<h3><strong><code class="docutils literal notranslate"><span class="pre">scripts</span></code></strong> section<a class="headerlink" href="#scripts-section" title="Permalink to this headline">¶</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">scripts</span></code> section contains custom scripts which can be run with the <code class="docutils literal notranslate"><span class="pre">spotty</span> <span class="pre">run</span> <span class="pre">&lt;SCRIPT_NAME&gt;</span></code>
+command. The following example defines 2 scripts: <code class="docutils literal notranslate"><span class="pre">jupyter</span></code> - to run Jupyter server and <code class="docutils literal notranslate"><span class="pre">train</span></code> -
+to start training a model:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">scripts</span><span class="p">:</span>
+  <span class="nt">jupyter</span><span class="p">:</span> <span class="p p-Indicator">|</span>
+    <span class="no">jupyter notebook --allow-root --ip 0.0.0.0 --notebook-dir=/workspace/project</span>
+
+  <span class="nt">train</span><span class="p">:</span> <span class="p p-Indicator">|</span>
+    <span class="no">if [ -n &quot;{{MODEL}}&quot; ]; then</span>
+      <span class="no">python /workspace/project/model/train.py --model-name {{MODEL}}</span>
+    <span class="no">else</span>
+      <span class="no">echo &quot;The MODEL parameter is required.&quot;</span>
+    <span class="no">fi</span>
+</pre></div>
+</div>
+<p>To start Jupyter simply run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>spotty run jupyter
+</pre></div>
+</div>
+<p>It will start Jupyter server on the remote instance inside a tmux session. Jupyter will be available on the port
+specified in the container configuration (see the example on top of the page).</p>
+<p>Copy an authentication token from the command output and use the <strong><code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">b</span></code></strong>, then <strong><code class="docutils literal notranslate"><span class="pre">d</span></code></strong> combination of keys
+to detach the tmux session - Jupyter will keep running.</p>
+<p>You also can write parametrized scripts. For example, the <code class="docutils literal notranslate"><span class="pre">train</span></code> script contains the <code class="docutils literal notranslate"><span class="pre">MODEL</span></code> parameter. So you
+could run your training script with different model names:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>spotty run train -p <span class="nv">MODEL</span><span class="o">=</span>my-model
+</pre></div>
+</div>
+<p>Use the <strong><code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">b</span></code></strong>, then <strong><code class="docutils literal notranslate"><span class="pre">d</span></code></strong> combination of keys to detached tmux session - the script will keep running.</p>
+<p>You can come back to the running script the following ways:</p>
+<ul class="simple">
+<li><p>either use the same command again - you will be reattached to the existing tmux session,</p></li>
+<li><p>or connect to the instance using the <code class="docutils literal notranslate"><span class="pre">spotty</span> <span class="pre">sh</span></code> command and then use the <strong><code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">b</span></code></strong>,
+then <strong><code class="docutils literal notranslate"><span class="pre">s</span></code></strong> combination of keys to switch into the right tmux session.</p></li>
+</ul>
+<p><strong>Note:</strong> don't forget to use the &quot;|&quot; character for multi-line scripts, otherwise the YAML parser
+will merge multiple lines together.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../cli/spotty.html" class="btn btn-neutral float-right" title="Spotty Command-line Interface" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="installation.html" class="btn btn-neutral float-left" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

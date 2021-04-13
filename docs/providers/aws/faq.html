@@ -1,0 +1,300 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>FAQ &mdash; spotty 1.3.2 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/styles.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+        <script src="../../../_static/scripts.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="GCP Provider Overview" href="../gcp/overview.html" />
+    <link rel="prev" title="Caching Docker Image on an EBS Volume" href="caching-docker-image-on-an-ebs-volume.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html">
+          
+
+          
+            
+            <img src="../../../_static/logo_400x130_grey.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.3.2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p><span class="caption-text">User Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../user-guide/getting-started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user-guide/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user-guide/configuration-file.html">Spotty Configuration File</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cli/spotty.html">Spotty Command-line Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../cli/spotty-start.html">spotty start</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cli/spotty-stop.html">spotty stop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cli/spotty-sh.html">spotty sh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cli/spotty-sync.html">spotty sync</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cli/spotty-download.html">spotty download</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cli/spotty-run.html">spotty run</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cli/spotty-exec.html">spotty exec</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cli/spotty-aws.html">spotty aws</a></li>
+</ul>
+</li>
+</ul>
+<p><span class="caption-text">Providers</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../local/overview.html">Local Provider</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../local/instance-parameters.html">Instance Parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../remote/overview.html">Remote Provider</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../remote/instance-parameters.html">Instance Parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="overview.html">AWS Provider</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="instance-parameters.html">Instance Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ebs-volumes-and-deletion-policies.html">EBS Volumes and Deletion Policies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="caching-docker-image-on-an-ebs-volume.html">Caching Docker Image on an EBS Volume</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">FAQ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../gcp/overview.html">GCP Provider</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../gcp/account-preparation.html">GCP Account Preparation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gcp/instance-parameters.html">Instance Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gcp/disks-and-deletion-policies.html">Disks and Deletion Policies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gcp/caching-docker-image-on-a-disk.html">Caching Docker Image on a Disk</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">spotty</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="overview.html">AWS Provider Overview</a> &raquo;</li>
+        
+      <li>FAQ</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="faq">
+<h1>FAQ<a class="headerlink" href="#faq" title="Permalink to this headline">¶</a></h1>
+<section id="how-does-spotty-choose-the-aws-availability-zone-where-to-run-the-instance">
+<h2>How does Spotty choose the AWS Availability Zone where to run the instance?<a class="headerlink" href="#how-does-spotty-choose-the-aws-availability-zone-where-to-run-the-instance" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>If the AZ is specified in the configuration file, this AZ will be used to run the instance.</p></li>
+<li><p>If the instance already has some EBS volumes created, Spotty will pick up the volumes' AZ.</p></li>
+<li><p>Otherwise Spotty will let AWS choose an AZ. Automatically chosen AZ might not have the
+lowest Spot price, but in practice, it usually does.</p></li>
+</ol>
+<p>Spotty will raise an error if the AZ in the configuration file doesn't match AZs of the volumes
+or AZs of the volumes are different.</p>
+</section>
+<section id="why-an-instance-is-launching-too-long">
+<h2>Why an instance is launching too long?<a class="headerlink" href="#why-an-instance-is-launching-too-long" title="Permalink to this headline">¶</a></h2>
+<p>Most likely the instance cannot be launched because you're trying to launch a Spot instance
+and it cannot be fulfilled. You can try to change the region or availability zone, choose another
+type of the instance, or run an On-demand Instance by removing the <code class="docutils literal notranslate"><span class="pre">spotInstance</span></code> parameter or setting it to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+</section>
+<section id="the-instance-is-failed-to-start-where-can-i-find-the-logs">
+<h2>The instance is failed to start. Where can I find the logs?<a class="headerlink" href="#the-instance-is-failed-to-start-where-can-i-find-the-logs" title="Permalink to this headline">¶</a></h2>
+<ol>
+<li><p>If the CloudFormation stack failed when it was launching the instance itself, then you need to log in to
+your AWS Console and check CloudFormation logs there.</p></li>
+<li><p>If the stack is failed after the instance is launched, then most likely the container is
+failed to start because of the startup commands. In this case, Spotty usually automatically downloads necessary
+logs to your local machine and shows where to find them. If that didn't happen, you can connect to the
+host OS using the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>spotty sh -H
+</pre></div>
+</div>
+<p>Then you can check the <code class="docutils literal notranslate"><span class="pre">cfn-init</span></code> logs to find out why the container is failed:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo tail /var/log/cfn-init-cmd.log
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="how-to-ssh-to-a-spotty-instance-from-a-different-machine">
+<h2>How to ssh to a Spotty instance from a different machine?<a class="headerlink" href="#how-to-ssh-to-a-spotty-instance-from-a-different-machine" title="Permalink to this headline">¶</a></h2>
+<p>When you start an instance, Spotty creates an EC2 Key Pair and downloads a private key to the
+<code class="docutils literal notranslate"><span class="pre">~/.spotty/keys/aws</span></code> directory. If you want to have access to the instance from a different machine using
+the <code class="docutils literal notranslate"><span class="pre">spotty</span> <span class="pre">sh</span></code> or the <code class="docutils literal notranslate"><span class="pre">spotty</span> <span class="pre">run</span></code> commands, you need to copy the private key to that machine to the same directory.</p>
+<p><strong>Note:</strong> if you already have an EC2 Key Pair created for the project and the private key was
+saved on the machine A (where from an instance was launched the first time) and then you're running
+an instance for the same project from the machine B that doesn't have a private key in the <code class="docutils literal notranslate"><span class="pre">~/.spotty/keys/aws</span></code>
+directory, then the EC2 Key Pair will be recreated and the machine A will not be able to connect to instances
+because its private key doesn't match the EC2 Key Pair anymore.</p>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../gcp/overview.html" class="btn btn-neutral float-right" title="GCP Provider Overview" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="caching-docker-image-on-an-ebs-volume.html" class="btn btn-neutral float-left" title="Caching Docker Image on an EBS Volume" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

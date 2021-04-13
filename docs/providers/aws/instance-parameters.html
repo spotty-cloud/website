@@ -1,0 +1,325 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Instance Parameters &mdash; spotty 1.3.2 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/styles.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+        <script src="../../../_static/scripts.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="EBS Volumes and Deletion Policies" href="ebs-volumes-and-deletion-policies.html" />
+    <link rel="prev" title="AWS Provider Overview" href="overview.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html">
+          
+
+          
+            
+            <img src="../../../_static/logo_400x130_grey.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.3.2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p><span class="caption-text">User Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../user-guide/getting-started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user-guide/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../user-guide/configuration-file.html">Spotty Configuration File</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cli/spotty.html">Spotty Command-line Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../cli/spotty-start.html">spotty start</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cli/spotty-stop.html">spotty stop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cli/spotty-sh.html">spotty sh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cli/spotty-sync.html">spotty sync</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cli/spotty-download.html">spotty download</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cli/spotty-run.html">spotty run</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cli/spotty-exec.html">spotty exec</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cli/spotty-aws.html">spotty aws</a></li>
+</ul>
+</li>
+</ul>
+<p><span class="caption-text">Providers</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../local/overview.html">Local Provider</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../local/instance-parameters.html">Instance Parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../remote/overview.html">Remote Provider</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../remote/instance-parameters.html">Instance Parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="overview.html">AWS Provider</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Instance Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ebs-volumes-and-deletion-policies.html">EBS Volumes and Deletion Policies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="caching-docker-image-on-an-ebs-volume.html">Caching Docker Image on an EBS Volume</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html">FAQ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../gcp/overview.html">GCP Provider</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../gcp/account-preparation.html">GCP Account Preparation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gcp/instance-parameters.html">Instance Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gcp/disks-and-deletion-policies.html">Disks and Deletion Policies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gcp/caching-docker-image-on-a-disk.html">Caching Docker Image on a Disk</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">spotty</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="overview.html">AWS Provider Overview</a> &raquo;</li>
+        
+      <li>Instance Parameters</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="instance-parameters">
+<h1>Instance Parameters<a class="headerlink" href="#instance-parameters" title="Permalink to this headline">¶</a></h1>
+<p>Instance parameters are part of the <a class="reference internal" href="../../user-guide/configuration-file.html"><span class="doc">configuration file</span></a>, but for each provider they are different.
+Here you can find parameters for an AWS instance:</p>
+<ul>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">containerName</span></code></strong> <em>(optional)</em> - a name of the container from the <code class="docutils literal notranslate"><span class="pre">containers</span></code> section.
+Default value: <code class="docutils literal notranslate"><span class="pre">default</span></code>.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">region</span></code></strong> - AWS region where to run an instance (you can use command <code class="docutils literal notranslate"><span class="pre">spotty</span> <span class="pre">aws</span> <span class="pre">spot-prices</span></code> to find the
+cheapest region).</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">availabilityZone</span></code></strong> <em>(optional)</em> - AWS availability zone where to run an instance. If a zone is not specified, it
+will be chosen automatically.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">subnetId</span></code></strong> <em>(optional)</em> - AWS subnet ID. If this parameter is set, the &quot;availabilityZone&quot; parameter should be
+set as well. If it's not specified, a default subnet will be used.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">instanceType</span></code></strong> - a type of the instance to run. You can find more information about
+types of GPU instances here:
+<a class="reference external" href="https://docs.aws.amazon.com/dlami/latest/devguide/gpu.html">Recommended GPU Instances</a>.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">spotInstance</span></code></strong> <em>(optional)</em> - if set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, runs a Spot instance instead of an On-demand instance,</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">amiName</span></code></strong> <em>(optional)</em> - a name of the AMI with NVIDIA Docker (default value is &quot;SpottyAMI&quot;). Use the
+<code class="docutils literal notranslate"><span class="pre">spotty</span> <span class="pre">aws</span> <span class="pre">create-ami</span></code> command to create it. This AMI will be used to run your application inside the Docker container.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">amiId</span></code></strong> <em>(optional)</em> - ID of the AMI with NVIDIA Docker. This parameter can be used to run an instance using a
+shared Spotty AMI.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">maxPrice</span></code></strong> <em>(optional)</em> - the maximum price per hour that you are willing to pay for a Spot Instance. By default,
+it's the On-demand price for the chosen instance type. Read more here:
+<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances.html">Spot Instances</a>.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">rootVolumeSize</span></code></strong> <em>(optional)</em> - size of the root volume in GB. The root volume will be destroyed once
+the instance is terminated. Use attached volumes to store the data you need to keep (see &quot;volumes&quot; parameter below).</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">dockerDataRoot</span></code></strong> <em>(optional)</em> - directory where Docker will store all downloaded and built images.
+Read more: <a class="reference internal" href="caching-docker-image-on-an-ebs-volume.html"><span class="doc">Caching Docker Image on an EBS Volume</span></a>.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">volumes</span></code></strong> <em>(optional)</em> - the list of volumes to attach to the instance:</p>
+<ul class="simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">name</span></code></strong> - a name of the volume. This name should match one of the container's <code class="docutils literal notranslate"><span class="pre">volumeMounts</span></code> to have this
+volume attached to the container's filesystem.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">parameters</span></code></strong> <em>(optional)</em> - parameters of the volume:</p>
+<ul>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">type</span></code></strong> <em>(optional)</em> - the volume type. Supported types: &quot;<strong>gp2</strong>&quot;, &quot;<strong>sc1</strong>&quot;, &quot;<strong>st1</strong>&quot;
+and &quot;<strong>standard</strong>&quot;. The default value is &quot;gp2&quot;. Read more here:
+<a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html">Amazon EBS Volume Types</a>.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">size</span></code></strong> <em>(optional)</em> - size of the volume in GB. Size of the volume cannot be less than the size of
+the existing snapshot but can be increased.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">deletionPolicy</span></code></strong> <em>(optional)</em> - what to do with the volume once the instance is terminated using the
+<code class="docutils literal notranslate"><span class="pre">spotty</span> <span class="pre">stop</span></code> command. Possible values include: &quot;<strong>Retain</strong>&quot; <em>(value by default)</em>, &quot;<strong>CreateSnapshot</strong>&quot;,
+&quot;<strong>UpdateSnapshot</strong>&quot; and  &quot;<strong>Delete</strong>&quot;. Read more here: <a class="reference internal" href="ebs-volumes-and-deletion-policies.html"><span class="doc">EBS Volumes and Deletion Policies</span></a>.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">volumeName</span></code></strong> <em>(optional)</em> - name of the EBS volume. The default name is
+&quot;{project_name}-{instance_name}-{volume_name}&quot;.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">mountDir</span></code></strong> <em>(optional)</em> - directory where the volume will be mounted on the instance. The default
+directory is &quot;/mnt/{ebs_volume_name}&quot;.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">ports</span></code></strong> <em>(optional)</em> - list of ports to open on the instance. For example:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">ports</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">6006</span><span class="p p-Indicator">,</span> <span class="nv">8888</span><span class="p p-Indicator">]</span>
+</pre></div>
+</div>
+<p>It will open ports 6006 for TensorBoard and 8888 for Jupyter Notebook.</p>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">localSshPort</span></code></strong> <em>(optional)</em> - if this parameter is set, all the Spotty commands will create SSH connections
+with the instance using the IP address <strong>127.0.0.1</strong> and the specified port. This can be useful in case when an
+instance doesn't have a public IP address and a jump-server is used for tunneling.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">managedPolicyArns</span></code></strong> <em>(optional)</em> - a list of Amazon Resource Names (ARNs) of the IAM managed policies that
+you want to attach to the instance role. Read more about Managed Policies
+<a class="reference external" href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_managed-vs-inline.html">here</a>.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">instanceProfileArn</span></code></strong> <em>(optional)</em> - an Amazon Resource Name (ARN) of the IAM Instance Profile that you'd like
+to attach to the instance. Read more about Instance Profiles
+<a class="reference external" href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2_instance-profiles.html">here</a>.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">commands</span></code></strong> <em>(optional)</em> - commands that should be run on the host OS before the container is started.
+For example, you could login to Amazon ECR to pull a Docker image from there
+(<a class="reference external" href="https://docs.aws.amazon.com/dlami/latest/devguide/deep-learning-containers-images.html">Deep Learning Containers Images</a>):</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">commands</span><span class="p">:</span> <span class="p p-Indicator">|</span>
+  <span class="no">$(aws ecr get-login --no-include-email --region us-east-2 --registry-ids 763104351884)</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ebs-volumes-and-deletion-policies.html" class="btn btn-neutral float-right" title="EBS Volumes and Deletion Policies" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="overview.html" class="btn btn-neutral float-left" title="AWS Provider Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
